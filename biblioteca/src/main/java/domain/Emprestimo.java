@@ -1,15 +1,13 @@
 package domain;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Past;
 
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "emprestimo")
 public class Emprestimo {
 
     @Id
@@ -17,6 +15,10 @@ public class Emprestimo {
     private Long id;
 
     @Past
+    @Column(name = "data_Emprestimo", nullable = false)
     private LocalDate dataEmprestimo;
+
+    @Column(name = "data_Devolucao", nullable = false)
+    private LocalDate dataDevolucao;
 
 }
