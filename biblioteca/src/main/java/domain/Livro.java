@@ -36,5 +36,11 @@ public class Livro {
     private LocalDate lancamento;
 
 
+    @ManyToOne
+    @JoinColumn(name = "id_usuario")
+    private Usuario usuario;
+
+
+
 
 }
