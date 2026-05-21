@@ -1,4 +1,4 @@
-package exception;
+/*package exception;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -14,8 +14,10 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @ControllerAdvice
 public class ControllerExceptionHandler extends ResponseEntityExceptionHandler {
+
 
     @Override
     protected ResponseEntity<Object> handleMethodArgumentoNotValid(MethodArgumentNotValidException ex,
@@ -27,10 +29,10 @@ public class ControllerExceptionHandler extends ResponseEntityExceptionHandler {
             erros.add(error.getField() + ": " + error.getDefaultMessage());
         }
 
-        RespostaErro respostaErro = new RespostaErro(status.value()),
-                "Existem campos inválidos", LocalDateTime.now(),erros);
+        ErroResposta erroResposta = new ErroResposta(status.value(),
+            "Existem campos inválidos", LocalDateTime.now(),erros);
 
-return super.handleExceptionInternal(ex, RespostaErro, headers, status, request);
+return super.handleExceptionInternal(ex, ErroResposta, headers, status, request);
     }
-
 }
+*/

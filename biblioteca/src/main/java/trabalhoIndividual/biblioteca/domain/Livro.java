@@ -1,12 +1,16 @@
-package domain;
+package trabalhoIndividual.biblioteca.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "livro")
@@ -39,6 +43,11 @@ public class Livro {
     @ManyToOne
     @JoinColumn(name = "id_usuario")
     private Usuario usuario;
+
+
+    @ManyToMany(mappedBy = "livros")
+    @JsonManagedReference
+    private Set<Categoria> categorias = new HashSet<>();
 
 
 

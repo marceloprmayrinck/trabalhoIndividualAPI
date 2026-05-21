@@ -1,4 +1,4 @@
-package domain;
+package trabalhoIndividual.biblioteca.domain;
 
 
 import jakarta.persistence.*;

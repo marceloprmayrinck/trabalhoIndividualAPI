@@ -1,12 +1,12 @@
-package controller;
+package trabalhoIndividual.biblioteca.controller;
 
 
-import domain.PerfilAcessibilidade;
+import trabalhoIndividual.biblioteca.domain.PerfilAcessibilidade;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import repository.PerfilAcessibilidadeRepository;
+import trabalhoIndividual.biblioteca.repository.PerfilAcessibilidadeRepository;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package repository;
+package trabalhoIndividual.biblioteca.repository;
 
-import domain.Usuario;
+import trabalhoIndividual.biblioteca.domain.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {

@@ -1,12 +1,12 @@
-package controller;
+package trabalhoIndividual.biblioteca.controller;
 
 
-import domain.Categoria;
+import trabalhoIndividual.biblioteca.domain.Categoria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import repository.CategoriaRepository;
+import trabalhoIndividual.biblioteca.repository.CategoriaRepository;
 
 import java.util.List;
 
