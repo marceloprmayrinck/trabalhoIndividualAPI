@@ -1,6 +1,6 @@
-# 📚 Biblioteca Inclusiva — API
+# Biblioteca Inclusiva — API
 
-API RESTful desenvolvida para o curso **Serratec**, como um trabalho individual.
+API RESTful desenvolvida para o curso **Serratec** como um trabalho individual.
 
 ---
 
