@@ -2,6 +2,8 @@ package trabalhoIndividual.biblioteca.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -36,7 +38,7 @@ public class Livro {
     private String autor;
 
     @Past
-    @Column(name = "lançamento", nullable = false)
+    @Column(name = "lancamento", nullable = false)
     private LocalDate lancamento;
 
 
@@ -46,10 +48,76 @@ public class Livro {
 
 
     @ManyToMany(mappedBy = "livros")
-    @JsonManagedReference
-    private Set<Categoria> categorias = new HashSet<>();
+    @JsonIgnoreProperties("livros")
+    private Set<Categoria> categorias;
 
 
+    public Livro(Long id, String titulo, String editora, String autor, LocalDate lancamento, Usuario usuario, Set<Categoria> categorias) {
+        this.id = id;
+        this.titulo = titulo;
+        this.editora = editora;
+        this.autor = autor;
+        this.lancamento = lancamento;
+        this.usuario = usuario;
+        this.categorias = categorias;
+    }
 
+    public Livro() {
+    }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getEditora() {
+        return editora;
+    }
+
+    public void setEditora(String editora) {
+        this.editora = editora;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public LocalDate getLancamento() {
+        return lancamento;
+    }
+
+    public void setLancamento(LocalDate lancamento) {
+        this.lancamento = lancamento;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Set<Categoria> getCategorias() {
+        return categorias;
+    }
+
+    public void setCategorias(Set<Categoria> categorias) {
+        this.categorias = categorias;
+    }
 }

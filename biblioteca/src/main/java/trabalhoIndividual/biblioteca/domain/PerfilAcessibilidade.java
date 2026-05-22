@@ -22,4 +22,38 @@ public class PerfilAcessibilidade {
     @OneToOne
     @JoinColumn(name = "id_usuario", nullable = false, unique = true)
     private Usuario usuario;
+
+
+    public PerfilAcessibilidade(Long id, String numCarteira, Usuario usuario) {
+        this.id = id;
+        this.numCarteira = numCarteira;
+        this.usuario = usuario;
+    }
+
+    public PerfilAcessibilidade() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNumCarteira() {
+        return numCarteira;
+    }
+
+    public void setNumCarteira(String numCarteira) {
+        this.numCarteira = numCarteira;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 }

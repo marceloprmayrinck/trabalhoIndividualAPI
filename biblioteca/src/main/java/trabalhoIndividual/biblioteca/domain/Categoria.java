@@ -2,6 +2,8 @@ package trabalhoIndividual.biblioteca.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -26,9 +28,42 @@ public class Categoria {
 
 
     @ManyToMany
-    @JoinTable(name = "categoriaLivro", joinColumns = @JoinColumn(name = "id_categoria"),
+    @JoinTable(name = "categoria_livro", joinColumns = @JoinColumn(name = "id_categoria"),
             inverseJoinColumns = @JoinColumn(name = "id_livro"))
-    @JsonBackReference
-    private Set<Livro> livros = new HashSet<>();
+    @JsonIgnoreProperties("categorias")
+    private Set<Livro> livros;
 
+
+    public Categoria(Long id, String genero, Set<Livro> livros) {
+        this.id = id;
+        this.genero = genero;
+        this.livros = livros;
+    }
+
+    public Categoria() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public Set<Livro> getLivros() {
+        return livros;
+    }
+
+    public void setLivros(Set<Livro> livros) {
+        this.livros = livros;
+    }
 }
