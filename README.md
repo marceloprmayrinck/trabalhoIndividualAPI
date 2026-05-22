@@ -1,6 +1,6 @@
 # 📚 Biblioteca Inclusiva — API
 
-API RESTful desenvolvida como trabalho individual para o curso **Serratec**, com o objetivo de gerenciar uma biblioteca inclusiva.
+API RESTful desenvolvida para o curso **Serratec**, como um trabalho individual.
 
 ---
 
@@ -68,8 +68,6 @@ A API estará disponível em: `http://localhost:8080`
 
 ## 📖 Documentação da API (Swagger)
 
-Após subir a aplicação, acesse a documentação interativa:
-
 - **Swagger UI:** [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 - **OpenAPI JSON:** [http://localhost:8080/v3/api-docs](http://localhost:8080/v3/api-docs)
 
@@ -80,6 +78,7 @@ Após subir a aplicação, acesse a documentação interativa:
 **Marcelo Pozzato Rabello Mayrinck**
 - Email: marceloprmayrinck@gmail.com
 - GitHub: [@marceloprmayrinck](https://github.com/marceloprmayrinck)
+- LinkedIn [@marcelomayrinck](https://www.linkedin.com/in/marcelo-mayrinck/)
 
 ---
 
